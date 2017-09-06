@@ -1,0 +1,122 @@
+
+game.png
+format: RGBA8888
+filter: MipMapLinearLinear,MipMapLinearLinear
+repeat: none
+water
+  rotate: false
+  xy: 1, 193
+  size: 644, 700
+  orig: 644, 700
+  offset: 0, 0
+  index: -1
+FlameSpriteAnimation
+  rotate: false
+  xy: 1, 167
+  size: 168, 24
+  orig: 168, 24
+  offset: 0, 0
+  index: -1
+flame_a
+  rotate: false
+  xy: 647, 829
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+flame_a
+  rotate: false
+  xy: 1, 101
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+flame_a
+  rotate: false
+  xy: 647, 763
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+flame_a
+  rotate: false
+  xy: 713, 829
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+flame_a
+  rotate: false
+  xy: 1, 35
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+flame_a
+  rotate: false
+  xy: 67, 101
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 6
+star_particle
+  rotate: false
+  xy: 647, 697
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+enemy
+  rotate: false
+  xy: 713, 795
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+particle
+  rotate: false
+  xy: 779, 861
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+platform
+  rotate: false
+  xy: 171, 175
+  size: 48, 16
+  orig: 48, 16
+  offset: 0, 0
+  index: -1
+player
+  rotate: false
+  xy: 1, 1
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+pre_particle
+  rotate: false
+  xy: 67, 67
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+waterdrop
+  rotate: false
+  xy: 133, 149
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+
+game2.png
+format: RGBA8888
+filter: MipMapLinearLinear,MipMapLinearLinear
+repeat: none
+reallybadlydrawndirt
+  rotate: false
+  xy: 1, 1
+  size: 644, 520
+  orig: 644, 520
+  offset: 0, 0
+  index: -1

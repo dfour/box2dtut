@@ -1,0 +1,136 @@
+
+loading.png
+format: RGBA8888
+filter: MipMapLinearLinear,MipMapLinearLinear
+repeat: none
+staying-alight-logo
+  rotate: false
+  xy: 1, 4
+  size: 359, 108
+  orig: 359, 108
+  offset: 0, 0
+  index: -1
+copyright
+  rotate: false
+  xy: 362, 67
+  size: 182, 45
+  orig: 182, 45
+  offset: 0, 0
+  index: -1
+flamebackground
+  rotate: false
+  xy: 362, 1
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+loading-dash
+  rotate: false
+  xy: 546, 80
+  size: 39, 32
+  orig: 39, 32
+  offset: 0, 0
+  index: -1
+
+loading2.png
+format: RGBA8888
+filter: MipMapLinearLinear,MipMapLinearLinear
+repeat: none
+flames/flames
+  rotate: false
+  xy: 1, 809
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: 1
+flames/flames
+  rotate: false
+  xy: 1, 607
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: 2
+flames/flames
+  rotate: false
+  xy: 203, 809
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: 3
+flames/flames
+  rotate: false
+  xy: 1, 405
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: 4
+flames/flames
+  rotate: false
+  xy: 203, 607
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: 5
+flames/flames
+  rotate: false
+  xy: 405, 809
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: 6
+flames/flames
+  rotate: false
+  xy: 1, 203
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: 7
+flames/flames
+  rotate: false
+  xy: 203, 405
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: 8
+flames/flames
+  rotate: false
+  xy: 405, 607
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: 9
+flames/flames
+  rotate: false
+  xy: 607, 809
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: 10
+flames/flames
+  rotate: false
+  xy: 1, 1
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: 11
+flames/flames
+  rotate: false
+  xy: 203, 203
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: 12
+flames/flames
+  rotate: false
+  xy: 405, 405
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: 13
+flames/flames
+  rotate: false
+  xy: 607, 607
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: 15
