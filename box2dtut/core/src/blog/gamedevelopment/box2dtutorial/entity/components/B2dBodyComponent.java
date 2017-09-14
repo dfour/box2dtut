@@ -9,6 +9,7 @@ public class B2dBodyComponent implements Component, Poolable{
 	public boolean isDead = false;
 	@Override
 	public void reset() {
+		body = null;
 		isDead = false;
 	}
 	

@@ -94,7 +94,7 @@ public class EndScreen implements Screen {
 		
 		stage.act();
 		stage.draw();
-		parent.changeScreen(Box2DTutorial.MENU);
+		//parent.changeScreen(Box2DTutorial.MENU);
 	}
 
 	@Override

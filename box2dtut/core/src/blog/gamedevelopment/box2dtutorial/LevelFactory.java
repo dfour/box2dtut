@@ -7,9 +7,6 @@ import blog.gamedevelopment.box2dtutorial.simplexnoise.OpenSimplexNoise;
 
 import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.PooledEngine;
-import com.badlogic.gdx.ai.fsm.DefaultStateMachine;
-import com.badlogic.gdx.ai.steer.behaviors.Seek;
-import com.badlogic.gdx.ai.steer.behaviors.Wander;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
@@ -17,8 +14,10 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
 import com.badlogic.gdx.physics.box2d.World;
+import com.badlogic.gdx.utils.Array;
 
 public class LevelFactory {
 	private BodyFactory bodyFactory;
@@ -35,6 +34,7 @@ public class LevelFactory {
 	private ParticleEffectManager pem;
 	public Entity player;
 	public B2dAssetManager assman;
+		
 	
 	public LevelFactory(PooledEngine en, B2dAssetManager assMan){
 		engine = en;
@@ -245,7 +245,7 @@ public class LevelFactory {
 		entity.add(colComp);
 		entity.add(type);
 		entity.add(stateCom);
-		entity .add(scom);
+		entity.add(scom);
 		
 		engine.addEntity(entity);
 		this.player = entity;
@@ -454,4 +454,19 @@ public class LevelFactory {
 		return entity;
 		
 	}
+
+
+	public void resetWorld() {
+		currentLevel = 0;
+		openSim = new OpenSimplexNoise(MathUtils.random(2000l));
+		Array<Body> bods = new Array<Body>();
+		world.getBodies(bods);
+		for(Body bod:bods){
+			world.destroyBody(bod);
+		}
+	}
 }
+
+
+
+

@@ -27,6 +27,6 @@ public class StateComponent implements Component, Poolable {
 	public void reset() {
 		state = 0;
 	    time = 0.0f;
-	    isLooping = false;	
+	    isLooping = true;	
 	}
 }

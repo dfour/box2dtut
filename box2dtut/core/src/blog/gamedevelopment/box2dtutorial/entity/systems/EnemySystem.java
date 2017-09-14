@@ -20,7 +20,7 @@ public class EnemySystem extends IteratingSystem{
 	private ComponentMapper<EnemyComponent> em;
 	private ComponentMapper<B2dBodyComponent> bodm;
 	private LevelFactory levelFactory;
-	private Entity player;
+
 	
 	@SuppressWarnings("unchecked")
 	public EnemySystem(LevelFactory lvlf){
@@ -28,7 +28,6 @@ public class EnemySystem extends IteratingSystem{
 		em = ComponentMapper.getFor(EnemyComponent.class);
 		bodm = ComponentMapper.getFor(B2dBodyComponent.class);
 		levelFactory = lvlf;
-		player = levelFactory.player;
 	}
 
 	@Override
@@ -51,17 +50,17 @@ public class EnemySystem extends IteratingSystem{
 					bodyCom.body.getPosition().y, 
 					bodyCom.body.getAngle());	
 		}else if(enemyCom.enemyType == Type.CLOUD){
-			B2dBodyComponent b2Player = Mapper.b2dCom.get(player);
+			B2dBodyComponent b2Player = Mapper.b2dCom.get(levelFactory.player);
 			B2dBodyComponent b2Enemy = Mapper.b2dCom.get(entity);
 			
 			float distance = b2Player.body.getPosition().dst(b2Enemy.body.getPosition());
 			//System.out.println(distance);
 			SteeringComponent scom = Mapper.sCom.get(entity);
 			if(distance < 3 && scom.currentMode != SteeringComponent.SteeringState.FLEE){
-				scom.steeringBehavior = SteeringPresets.getFlee(Mapper.sCom.get(entity),Mapper.sCom.get(player));
+				scom.steeringBehavior = SteeringPresets.getFlee(Mapper.sCom.get(entity),Mapper.sCom.get(levelFactory.player));
 				scom.currentMode = SteeringComponent.SteeringState.FLEE;
 			}else if(distance > 3 && distance < 10 && scom.currentMode != SteeringComponent.SteeringState.ARRIVE){
-				scom.steeringBehavior = SteeringPresets.getArrive(Mapper.sCom.get(entity),Mapper.sCom.get(player));
+				scom.steeringBehavior = SteeringPresets.getArrive(Mapper.sCom.get(entity),Mapper.sCom.get(levelFactory.player));
 				scom.currentMode = SteeringComponent.SteeringState.ARRIVE;
 			}else if(distance > 15 && scom.currentMode != SteeringComponent.SteeringState.WANDER){
 				scom.steeringBehavior  = SteeringPresets.getWander(Mapper.sCom.get(entity));

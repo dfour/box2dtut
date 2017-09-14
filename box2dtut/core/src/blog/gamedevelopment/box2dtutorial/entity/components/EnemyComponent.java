@@ -15,7 +15,7 @@ public class EnemyComponent implements Component, Poolable{
 	public Type enemyType = Type.DROPLET;
 	@Override
 	public void reset() {
-		shootDelay = 0.5f;
+		shootDelay = 1.5f;
 		timeSinceLastShot = 0f;
 		enemyType = Type.DROPLET;
 		isDead = false;

@@ -41,20 +41,23 @@ public class PlayerControlSystem extends IteratingSystem{
 		StateComponent state = sm.get(entity);
 		PlayerComponent player = pm.get(entity);
 		
-		System.out.println(state.get());
+		
 		player.cam.position.y = b2body.body.getPosition().y;
 		
 		
 		if(b2body.body.getLinearVelocity().y > 0 && state.get() != StateComponent.STATE_FALLING){
 			state.set(StateComponent.STATE_FALLING);
+			System.out.println("setting to Falling");
 		}
 		
 		if(b2body.body.getLinearVelocity().y == 0){
 			if(state.get() == StateComponent.STATE_FALLING){
 				state.set(StateComponent.STATE_NORMAL);
+				System.out.println("setting to normal");
 			}
 			if(b2body.body.getLinearVelocity().x != 0 && state.get() != StateComponent.STATE_MOVING){
 				state.set(StateComponent.STATE_MOVING);
+				System.out.println("setting to moving");
 			}
 		}
 		// old function for testing platform ghosting
@@ -93,6 +96,7 @@ public class PlayerControlSystem extends IteratingSystem{
 				(state.get() == StateComponent.STATE_NORMAL || state.get() == StateComponent.STATE_MOVING)){
 			b2body.body.applyLinearImpulse(0, 12f * b2body.body.getMass() , b2body.body.getWorldCenter().x,b2body.body.getWorldCenter().y, true);
 			state.set(StateComponent.STATE_JUMPING);
+			System.out.println("setting to jumping");
 			player.onPlatform = false;
 			player.onSpring = false;
 		}
