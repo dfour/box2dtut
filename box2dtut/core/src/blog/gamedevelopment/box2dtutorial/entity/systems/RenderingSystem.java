@@ -94,7 +94,8 @@ public class RenderingSystem extends SortedIteratingSystem {
 	            float originY = height/2f;
 	
 	            batch.draw(tex.region,
-	                    t.position.x - originX, t.position.y - originY,
+	                    t.position.x - originX + tex.offsetX, 
+	                    t.position.y - originY + tex.offsetY,
 	                    originX, originY,
 	                    width, height,
 	                    PixelsToMeters(t.scale.x), PixelsToMeters(t.scale.y),

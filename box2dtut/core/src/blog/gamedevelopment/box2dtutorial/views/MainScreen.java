@@ -84,6 +84,7 @@ public class MainScreen implements Screen {
         
         lvlFactory.createFloor();
         lvlFactory.createWaterFloor();
+        //lvlFactory.createBackground();
         //lvlFactory.createSeeker(Mapper.sCom.get(player),20,15);
         
         
@@ -127,7 +128,7 @@ public class MainScreen implements Screen {
 
 	@Override
 	public void render(float delta) {
-		Gdx.gl.glClearColor(0f, 0f, 0f, 1);
+		Gdx.gl.glClearColor(0.4f, 0.4f, 0.8f, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		
 		engine.update(delta);
